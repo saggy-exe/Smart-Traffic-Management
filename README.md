@@ -80,6 +80,6 @@ SmartTrafficSystem/
 
 **UVH-26 Dataset (IISc Bangalore)**
 * Converted into YOLO format with 14 vehicle categories:
+
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; hatchback, sedan, suv, muv, bus, truck, three-wheeler, two-wheeler, lcv, mini-bus, tempo-traveller, bicycle, van, other.
-=======
 
