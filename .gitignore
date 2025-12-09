@@ -1,0 +1,96 @@
+# -----------------------------
+# Python
+# -----------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.egg
+.env
+.venv
+venv/
+
+# -----------------------------
+# OS / Editor files
+# -----------------------------
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# -----------------------------
+# Logs & temp files
+# -----------------------------
+*.log
+*.tmp
+*.cache
+*.bak
+
+# -----------------------------
+# Project Outputs
+# -----------------------------
+outputs/
+*.mp4
+*.avi
+*.mkv
+*.mov
+*.gif
+*.jpg
+*.jpeg
+*.png
+
+# -----------------------------
+# YOLO model weights
+# -----------------------------
+#models/*.pt
+#models/*.onnx
+#models/*.engine
+#models/*.trt
+
+# -----------------------------
+# Datasets (never upload)
+# -----------------------------
+# UVH-26 datasets, YOLO converted datasets, etc.
+*UVH*
+dataset/
+datasets/
+data/
+D:/huggingface_datasets/
+*.zip
+*.7z
+*.tar
+*.tar.gz
+
+# ---------------------------------
+# YOLOv5 library paths (ignored)
+# ---------------------------------
+# You imported yolov5 from outside, so keep project independent
+yolov5/
+*.yaml
+
+# ---------------------------------
+# Sensitive or machine-specific config
+# ---------------------------------
+*.ini
+*.cfg
+*.json
+*.csv
+
+# Allow only code-related JSON files
+!src/**/*.json
+!docs/**/*.json
+
+# ---------------------------------
+# IDE settings
+# ---------------------------------
+.idea/
+.vscode/
+*.code-workspace
+
+# ---------------------------------
+# Jupyter notebooks checkpoints
+# ---------------------------------
+.ipynb_checkpoints/
+
