@@ -1,74 +1,84 @@
-🚦 Smart Traffic Management System (Group 41)
+# 🚦 **Smart Traffic Management System (Group 41)**
 
-A real-time vehicle detection, classification, and tracking system built using:
+A real-time **vehicle detection**, **classification**, and **tracking system** using:
 
-YOLOv5 (custom-trained on UVH-26 dataset)
+* **YOLOv5** (custom-trained on UVH-26 dataset)
 
-DeepSORT (multi-object tracking)
+* **DeepSORT** (multi-object tracking)
 
-The system processes traffic videos and outputs tracks with unique IDs, enabling traffic monitoring and analytics.
+The system processes traffic videos and outputs tracks with unique IDs for monitoring and analytics.
 
-📌 Features
 
-Detects vehicles across 14 classes from the UVH-26 dataset
+## 📌 Features
 
-Tracks each vehicle with persistent IDs
+* Detects vehicles across **14 UVH-26 classes**
 
-Works on real traffic video footage
+* Tracks vehicles with **consistent IDs**
 
-Supports analytics such as movement patterns & vehicle count
+* Works on real traffic videos
 
-🧠 Tech Stack
+* Generates analytics (movement patterns, vehicle count, etc.)
 
-Python 3.10
 
-YOLOv5 (Ultralytics)
+## 🧠 Tech Stack
 
-DeepSORT
+* Python 3.10
 
-CUDA GPU acceleration
+* YOLOv5 (Ultralytics)
 
-UVH-26 Vehicle Dataset
+* DeepSORT
 
-📦 Installation
+* CUDA GPU Acceleration
+
+* UVH-26 Dataset
+
+
+## 📦 Installation
 git clone https://github.com/<your-username>/SmartTrafficSystem.git
 cd SmartTrafficSystem
+
 conda create -n traffic python=3.10
 conda activate traffic
+
 pip install -r requirements.txt
 pip install deep-sort-realtime
 
 
-Place the trained model:
+Place your trained YOLO model in:
 
 SmartTrafficSystem/models/best.pt
 
-▶️ Run Detection
+## ▶️ Run Detection
 python yolov5/detect.py --weights models/best.pt --source sample.jpg
 
-▶️ Run Tracking (YOLO + DeepSORT)
+## ▶️ Run Tracking (YOLO + DeepSORT)
 python src/track_deepsort.py \
-  --weights models/best.pt \
-  --source input_video.mp4 \
-  --output outputs/tracked_video.mp4
+&nbsp;&nbsp;--weights models/best.pt \
+&nbsp;&nbsp;--source input_video.mp4 \
+&nbsp;&nbsp;--output outputs/tracked_video.mp4
 
-📁 Project Structure
+## 📁 Project Structure
 SmartTrafficSystem/
-├── src/                 # All custom scripts
-├── models/              # best.pt (ignored in repo)
-├── outputs/             # Result videos/images
-├── docs/                # Presentation/document files
+
+│
+
+├── src/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # Custom scripts (tracking, dataset tools, etc.)
+
+├── models/ &nbsp;&nbsp;&nbsp;&nbsp; # best.pt (ignored in repository)
+
+├── outputs/ &nbsp;&nbsp;&nbsp;&nbsp; # Result images/videos
+
+├── docs/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # PDF + Presentation
+
+├── yolov5/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # YOLOv5 framework
+
+│
+
 └── README.md
 
-📊 Dataset
+## 📊 Dataset
 
-UVH-26 (IISc Bangalore)
-14 selected vehicle categories, converted into YOLO format for training.
+**UVH-26 Dataset (IISc Bangalore)**
+* Converted into YOLO format with 14 vehicle categories:
 
-👥 Team (Group 41)
-
-Detection & Model Training
-
-Tracking & Integration
-
-Documentation & Results
+hatchback, sedan, suv, muv, bus, truck, three-wheeler, two-wheeler, lcv, mini-bus, tempo-traveller, bicycle, van, other.
