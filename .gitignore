@@ -41,16 +41,9 @@ outputs/
 *.jpeg
 *.png
 
-# -----------------------------
-# YOLO model weights
-# -----------------------------
-#models/*.pt
-#models/*.onnx
-#models/*.engine
-#models/*.trt
 
 # -----------------------------
-# Datasets (never upload)
+# Datasets 
 # -----------------------------
 # UVH-26 datasets, YOLO converted datasets, etc.
 *UVH*
